@@ -1,0 +1,26 @@
+# 제외할 디렉토리
+gs42/
+.fzf/
+
+# macOS 시스템 자동 생성 파일
+.Spotlight-V100/
+.fseventsd/
+.DS_Store
+
+# 캐시나 무시할 수 있는 것
+.cache/
+
+# Node/npm 임시 파일
+.npm/_logs/
+.npm/_cacache/
+
+# 무시할 항목
+.local/state/
+.local/share/zoxide/
+.local/share/Trash/
+.local/share/recently-used.xbel
+
+# .gitignore에 추가
+.oh-my-zsh/
+.tmux/plugins/
+
