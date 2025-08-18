@@ -163,5 +163,4 @@ alias tir='tmux_index_reset'
 
 # Gemini CLI Settings
 export PATH="/home/minjkang/goinfre/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
-export GOOGLE_API_KEY=AIzaSyCoQNfM9KMNNBnxn0lyNJxRbMMH1COo50s
-export GEMINI_API_KEY=AIzaSyCoQNfM9KMNNBnxn0lyNJxRbMMH1COo50s
+# export GOOGLE_API_KEY=Please set your API key
