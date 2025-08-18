@@ -1,0 +1,12 @@
+davidanson.vscode-markdownlint
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+hars.cppsnippets
+pkief.material-icon-theme
+robole.markdown-snippets
+s-nlf-fh.glassit
+sherloach.solarized-osaka
+vscodevim.vim
+xabikos.javascriptsnippets
+yzhang.markdown-all-in-one
