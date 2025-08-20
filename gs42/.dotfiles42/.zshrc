@@ -17,7 +17,7 @@ bindkey '^[[B' history-search-forward
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export USB="$(cd "$(dirname "$0")"/../.. && pwd)"
+export USB="$HOME/goinfre/42env-linux"
 export GS42="$USB/gs42"
 export ZSH="$USB/.oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
