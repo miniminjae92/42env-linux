@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # 📁 setting path
-USB_DIR="$(cd "$(dirname "$0")"/../.. && pwd)"
-GS42_DIR="$USB_DIR/gs42"
+USB="$(cd "$(dirname "$0")"/../.. && pwd)"
+GS42="$USB/gs42"
 DOTFILES="$GS42_DIR/.dotfiles42"
 
 # Add setup.sh
@@ -87,7 +87,7 @@ unzip -o Meslo.zip
 rm Meslo.zip
 fc-cache -fv > /dev/null
 
-chmod +x /home/minjkang/goinfre/SanDisk/gs42/bin/zoxide
+chmod +x $GS42/bin/zoxide
 
 # ✅ Complete
 echo -e "\n✅ 모든 설정 완료! 터미널 재시작 후 적용됩니다."
