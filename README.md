@@ -18,26 +18,18 @@ My personal configuration files for the 42 cluster environment. This repository 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/miniminjae92/42env-linux
     ```
 
 2.  **Run the installation script:**
     The script will automatically create symbolic links for the configuration files.
     ```bash
-    # Make sure the script is executable
-    chmod +x install.sh
-
-    # Run the installer
-    ./install.sh
+    cd 42env-linux/gs42/scripts && \
+    chmod +x setup.sh && \
+    ./setup.sh
     ```
 
 3.  **Restart your shell:**
-    To apply all changes, close and reopen your terminal, or run:
-    ```bash
-    source ~/.zshrc
-    ```
-
 ---
 
 ## 🔧 Customization

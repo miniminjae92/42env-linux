@@ -12,7 +12,5 @@ echo "✅ 삭제 완료"
 
 rm -rf ~/.cache/*
 rm -rf ~/.local/state/*
-
 rm -rf ~/.local/share/nvim/{backup,undo}/* 2>/dev/null
-
 rm -rf ~/.local/share/nvim

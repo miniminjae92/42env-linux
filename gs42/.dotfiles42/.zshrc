@@ -1,6 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -18,22 +15,15 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export USB="$HOME/goinfre/SanDisk"
-export GS42="$HOME/goinfre/SanDisk/gs42"
-
-# Path to your Oh My Zsh installation.
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+export USB="$(cd "$(dirname "$0")"/../.. && pwd)"
+export GS42="$USB/gs42"
 export ZSH="$USB/.oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
-
 export PATH="$GS42/bin:$PATH"
-alias nvim="$GS42/bin/nvim"
-# Path Set 42
-#export VIMRUNTIME="$HOME/gs42/tools/nvim/nvim-linux-x86_64/share/nvim/runtime"
-#export XDG_CONFIG_HOME="$HOME/gs42/.dotfiles42"
-#export XDG_DATA_HOME="$HOME/gs42/.local/share"
 
+alias nvim="$GS42/bin/nvim"
 export VIMRUNTIME="$GS42/tools/nvim/nvim-linux-x86_64/share/nvim/runtime"
 export XDG_CONFIG_HOME="$GS42/.dotfiles42"  # .config 경로 수정
 export XDG_DATA_HOME="$HOME/.local/share"  # .local 경로 수정
@@ -42,12 +32,7 @@ export XDG_CACHE_HOME="$HOME/.cache"  # .cache 경로 수정
 
 # Set theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting) 
-
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -95,7 +80,7 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source "$GS42/tools/fzf-git.sh"
+# source "$GS42/tools/fzf-git.sh"
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
@@ -118,37 +103,16 @@ _fzf_comprun() {
 }
 
 # ----- Bat (better cat) -----
-
 export BAT_THEME=tokyonight_night
 
 # ---- Eza (better ls) -----
-
 #alias ls="eza --icons=always"
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Aliases
-
-# source ~/gs42/tools/thefuck/thefuck.py
-
 # ---- Zoxide (better cd) ----
-
 eval "$(zoxide init zsh)"
 
 alias cd="z"
 alias cl="clear"
-
-# 42 projects needs functions
-
-alias norm="norminette"
 
 tmux_index_reset() {
   local n=0
@@ -157,10 +121,15 @@ tmux_index_reset() {
     tmux move-window -s $i -t $n
   done
 }
-
 alias tir='tmux_index_reset'
 
+# 42 projects needs functions
+
+alias norm="norminette"
 
 # Gemini CLI Settings
-export PATH="/home/minjkang/goinfre/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
-# export GOOGLE_API_KEY=Please set your API key
+export PATH="/home/minjkang/42cluster/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
+if [ -f "$USB/.gemini.env" ]; then
+	source "$USB/.gemini.env"
+	export GOOGLE_API_KEY
+fi
