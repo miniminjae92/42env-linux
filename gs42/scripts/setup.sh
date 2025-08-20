@@ -73,6 +73,22 @@ create_symlink "$DOTFILES/.tmux.conf" ~/.tmux.conf
 create_symlink "$DOTFILES/.vimrc"     ~/.vimrc
 create_symlink "$DOTFILES/.zshrc"     ~/.zshrc
 
+# 6. Copying local binaries and setting permissions
+LOCAL_BIN_DIR="$HOME/.local/bin"
+mkdir -p "$LOCAL_BIN_DIR"
+
+if [ -f "$GS42/bin/zoxide" ]; then
+    echo "📋 Copying zoxide to $LOCAL_BIN_DIR..."
+    cp "$GS42/bin/zoxide" "$LOCAL_BIN_DIR/zoxide"
+    chmod +x "$LOCAL_BIN_DIR/zoxide"
+fi
+
+if [ -f "$GS42/bin/c_formatter_42" ]; then
+    echo "📋 Copying c_formatter_42 to $LOCAL_BIN_DIR..."
+    cp "$GS42/bin/c_formatter_42" "$LOCAL_BIN_DIR/c_formatter_42"
+    chmod +x "$LOCAL_BIN_DIR/c_formatter_42"
+fi
+
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 MESLO_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Meslo.zip"

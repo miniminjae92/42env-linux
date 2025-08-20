@@ -129,7 +129,7 @@ alias norm="norminette"
 
 # Gemini CLI Settings
 export PATH="/home/minjkang/42cluster/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
-if [ -f "$USB/.gemini.env" ]; then
-	source "$USB/.gemini.env"
+if [ -f "$HOME/.gemini.env" ]; then
+	source "$HOME/.gemini.env"
 	export GOOGLE_API_KEY
 fi

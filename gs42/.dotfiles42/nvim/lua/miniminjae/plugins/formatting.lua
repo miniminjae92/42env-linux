@@ -85,7 +85,7 @@ return {
 			formatters = {
 				forty_two = {
 					command = vim.fn.expand("~/.local/bin/c_formatter_42"),
-					args    = { "$FILENAME" }, -- 옵션 없이 파일 이름만
+					args    = { "$FILENAME" },
 					stdin   = false,
 				},
 			},
