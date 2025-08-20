@@ -18,6 +18,7 @@ My personal configuration files for the 42 cluster environment. This repository 
 
 1.  **Clone the repository:**
     ```bash
+    cd ~/goinfre && \
     git clone https://github.com/miniminjae92/42env-linux
     ```
 
