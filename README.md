@@ -40,7 +40,7 @@ This setup relies on specific versions of the following tools. To ensure compati
 1.  **Clone the repository into the `goinfre` folder:**
     ```bash
     cd ~/goinfre && \
-    git clone [https://github.com/miniminjae92/42env-linux](https://github.com/miniminjae92/42env-linux)
+    git clone git@github.com:miniminjae92/42env-linux.git
     ```
 
 2.  **Run the installation script:**
