@@ -9,8 +9,19 @@ DOTFILES="$GS42/.dotfiles42"
 create_symlink() {
     local target=$1
     local link=$2
-    [ -e "$link" ] || [ -L "$link" ] && rm -rf "$link"
+    local backup_name="$link.bak"
+
+    if [ -e "$link" ] || [ -L "$link" ]; then
+        if [ ! -L "$link" ]; then # 심볼릭 링크가 아닌 실제 파일일 경우에만 백업
+            echo "🔄 Backing up existing file: $link -> $backup_name"
+            mv "$link" "$backup_name"
+        else # 심볼릭 링크일 경우
+            echo "🗑️ Removing existing symbolic link: $link"
+            rm -rf "$link"
+        fi
+    fi
     ln -sf "$target" "$link"
+    echo "🔗 Created symlink: $target -> $link"
 }
 
 OHMYZSH_DIR="$USB/.oh-my-zsh"
