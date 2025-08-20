@@ -4,10 +4,13 @@ My personal configuration files for the 42 cluster environment. This repository 
 
 ## ✨ Features
 
+- **Operating System:** Ubuntu 22.04 LTS
+- **Architecture:** x86_64
 - **Shell:** Zsh with Oh My Zsh
 - **Prompt:** Powerlevel10k for a fast and informative prompt.
-- **Terminal Multiplexer:** Tmux with custom keybindings and a stylish theme.
-- **Fuzzy Finder:** fzf for blazing-fast file and history search.
+- **Terminal Multiplexer:** Tmux(-V: 3.2a) with custom keybindings and a stylish theme.
+- **Fuzzy Finder:** fzf(-V: 0.65.1) for blazing-fast file and history search.
+- **Neovim:** v0.11.0
 - *(Add more features as you add more configs)*
 
 ---
