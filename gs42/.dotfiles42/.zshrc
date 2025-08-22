@@ -128,7 +128,8 @@ alias tir='tmux_index_reset'
 alias norm="norminette"
 
 # Gemini CLI Settings
-export PATH="$HOME/goinfre/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
+export PATH="/home/minjkang/42cluster/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
 if [ -f "$HOME/.gemini.env" ]; then
 	source "$HOME/.gemini.env"
+	export GOOGLE_API_KEY
 fi
