@@ -62,7 +62,8 @@ To use the Gemini CLI with this environment, follow these steps:
 1.  Create a file named `.gemini.env` in your **home directory (`~`)**.
 2.  Add your API key to this file like so:
     ```
-    GOOGLE_API_KEY="your-api-key"
+    export GOOGLE_API_KEY="your-api-key"
+    export GEMINI_API_KEY="$GOOGLE_API_KEY"
     ```
 3.  The `~/.zshrc` configuration will automatically load this key and set it as an environment variable for you. If you prefer to store this file in a different location, you can modify the `if [ -f "$HOME/.gemini.env" ]` line in your `.zshrc` to match the new path. If your `node` binary path is different, please update the `export PATH` line in `~/.zshrc` to match your path.
 
