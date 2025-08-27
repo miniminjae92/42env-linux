@@ -132,3 +132,5 @@ export PATH="$HOME/goinfre/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
 if [ -f "$HOME/.gemini.env" ]; then
 	source "$HOME/.gemini.env"
 fi
+
+alias gemini='gemini --model gemini-2.5-flash'

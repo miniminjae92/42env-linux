@@ -24,3 +24,6 @@
 .tmux/plugins/
 
 .gemini.env
+
+gs42/.dotfiles/Code/
+configstore/
