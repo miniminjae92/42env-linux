@@ -53,13 +53,14 @@ This setup relies on specific versions of the following tools. To ensure compati
 
 3.  **Restart your shell:**
 
-```bash
-    cd ~/goinfre && \
-    git clone git@github.com:miniminjae92/42env-linux.git && \
-    cd 42env-linux/gs42/scripts && \
-    chmod +x setup.sh && \
-    ./setup.sh
-```
+**Summarize**
+    ```bash
+        cd ~/goinfre && \
+        git clone git@github.com:miniminjae92/42env-linux.git && \
+        cd 42env-linux/gs42/scripts && \
+        chmod +x setup.sh && \
+        ./setup.sh
+    ```
 
 ---
 
