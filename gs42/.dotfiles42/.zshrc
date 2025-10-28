@@ -126,6 +126,7 @@ alias tir='tmux_index_reset'
 # 42 projects needs functions
 
 alias norm="norminette"
+alias lg="lazygit"
 
 # Gemini CLI Settings
 export PATH="$HOME/goinfre/my_nodejs/node-v22.17.0-linux-x64/bin:$PATH"
