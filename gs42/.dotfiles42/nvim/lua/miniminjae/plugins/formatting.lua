@@ -91,7 +91,7 @@ return {
 			},
 			format_on_save = false
 		})
-		vim.keymap.set("n", "<leader>F", function()
+		vim.keymap.set("n", "<leader><leader>", function()
 		vim.cmd("w")
 		conform.format({ async = true, lsp_fallback = true })
 		end, { desc = "Save and format" })
